@@ -1,17 +1,18 @@
 import streamlit as st
 
 # Set the page title
-st.set_page_config(page_title="Photo Gallery App")
+st.set_page_config(page_title="World of Asia R.")
 
 # Define the photos and titles
 photo_data = {
-    "Adduthera": [
+    "2025": [
         {"image": "img 101.jpg", "title": "Design 1"},
         {"image": "img 102.jpg", "title": "Design 2"},
         {"image": "img 103.jpg", "title": "Design 3"},
         {"image": "img 104.jpg", "title": "Design 4"},
         {"image": "img 105.jpg", "title": "Design 5"},
-    ],
+    ]
+    /*,
     "Kobbari Bondam": [
         {"image": "img 1.jpg", "title": "Design 1"},
         {"image": "img 2.jpg", "title": "Design 2"},
@@ -76,11 +77,11 @@ photo_data = {
         {"image": "img 607.jpg", "title": "Design 7"},
         {"image": "img 608.jpg", "title": "Design 8"},
         {"image": "img 609.jpg", "title": "Design 9"}
-    ]
+    ]*/
 }
 
 # Create tabs
-tabs = st.tabs([ "Adduthera","Kobbari Bondam","Kobbari kudikalu","ungarala bindhelu","Garika muntha","Kanyadanam set"])
+tabs = st.tabs([ "2025","2026","2027"])
 
 # Display photos for each tab
 for tab_name, tab in zip(photo_data.keys(), tabs):
