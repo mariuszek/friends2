@@ -1,8 +1,9 @@
 import streamlit as st
 
 # Set the page title
-st.set_page_config(page_title="World of Asia R.")
-
+title = "Portfolio of Asia R."
+st.set_page_config(page_title=title)
+st.title(body=title)
 # Define the photos and titles
 photo_data = {
     "2025": [
