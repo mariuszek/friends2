@@ -10,16 +10,16 @@ st.title(body=title)
 
 # Create tabs
 
-st.tabs(photo_data.keys())
+tabs = st.tabs(photo_tabs)
 
 # Display photos for each tab
-for tab in zip(photo_data.keys()):
-        st.title(tab)
-        photos = photo_data[tab.index]
-        cols = st.columns(1)
-        for idx, photo in enumerate(photos):
-            with cols[idx % 1]:
-
-                st.image(photo["image"], width=1200,  )
-                st.write(photo["title"])
-                st.markdown("---")
+for tab_name, tab in zip(photo_data.keys(), tabs):
+        with tab:
+            st.title(tab_name)
+            photos = photo_data[tab_name]
+            cols = st.columns(1)
+            for idx, photo in enumerate(photos):
+                with cols[idx % 1]:
+                    st.image(photo["image"], width=1200  )
+                    st.write(photo["title"])
+                    st.markdown("---")
