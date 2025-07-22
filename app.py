@@ -17,9 +17,12 @@ for tab_name, tab in zip(photo_data.keys(), tabs):
         with tab:
             st.title(tab_name)
             photos = photo_data[tab_name]
-            cols = st.columns(1)
+        
+            cols = st.columns(len(photos))    
             for idx, photo in enumerate(photos):
-                with cols[idx % 1]:
-                    st.image(photo["image"], width=1200  )
+                with cols[idx % len(photos)]:
+                    st.image(photo["image"], width=1200)
                     st.write(photo["title"])
+                    st.popover(label="view").image(photo["image"])
                     st.markdown("---")
+                    
